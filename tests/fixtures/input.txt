@@ -1,0 +1,14 @@
+VERSION 1
+ID bb8c7729-c57c-4acb-bb35-35ecfa89e778
+STEPS 4
+1 TEXT Wat is je naam?
+2 CHOICE 4 Wat is je richting?
+Computerwetenschappen
+Fysica
+Wiskunde
+Andere
+3 TEXT Wat is je reden om C++ te leren?
+4 CHOICE 3 Hoeveel ervaring heb je met andere OO-talen?
+Geen ervaring
+Gemiddeld
+Expert
