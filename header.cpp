@@ -1,5 +1,9 @@
 #include "header.h"
 
+bool Header::ask(std::istream& in, std::ostream& out) {
+  return out << "Deze enquete bestaat uit " << steps << " vragen" << std::endl;
+}
+
 bool Header::decode(Decoder& coder) { // {{{1
   if(coder.token() != VersionToken) {
     return false;

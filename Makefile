@@ -1,20 +1,20 @@
-CFLAGS=-g -Wall -Ilib -Iinclude
+CFLAGS=-g -Wall -Iinclude
 LDFLAGS=
 
-SOURCES=$(filter-out main.cpp, $(wildcard *.cpp))
+SOURCES=$(filter-out asker.cpp, $(wildcard *.cpp))
 OBJECTS=$(SOURCES:.cpp=.o)
 
 TEST_SOURCES=$(wildcard tests/*.cpp)
 TEST_OBJECTS=$(TEST_SOURCES:.cpp=.o)
 
-build: bin/build
-	@./bin/build tests/fixtures/input.txt tests/fixtures/output.txt
+asker: bin/asker
+	@./bin/asker tests/fixtures/input.txt tests/fixtures/output.txt
 
 test: bin/test
 	@./bin/test --output=color
 
-bin/build: $(OBJECTS)
-	$(CXX) $(CFLAGS) -o bin/build main.o $(OBJECTS)
+bin/asker: asker.o $(OBJECTS)
+	$(CXX) $(CFLAGS) -o bin/asker asker.o $(OBJECTS)
 
 bin/test: $(OBJECTS) $(TEST_OBJECTS)
 	$(CXX) $(CFLAGS) -o bin/test $(OBJECTS) $(TEST_OBJECTS)

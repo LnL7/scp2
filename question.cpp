@@ -1,7 +1,7 @@
 #include "question.h"
 
 bool Question::ask(std::istream& in, std::ostream& out) { // {{{1
-  out << text_ << std::endl;
+  out << "Vraag " << line_ << ": " << text_ << std::endl;
   switch(type_) {
     case TextToken:   return askText(in);
     case ChoiceToken: return askChoice(in);

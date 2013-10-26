@@ -7,6 +7,7 @@
 
 class Header {
   public:
+    bool ask(std::istream& in, std::ostream& out);
     bool decode(Decoder& coder);
     bool encode(Encoder& coder);
     int steps;

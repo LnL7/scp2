@@ -13,5 +13,7 @@ int main(int argc, const char *argv[]) {
   Survey s;
 
   s.run(decoder, encoder);
+  std::cout << "Bedankt voor je deelname." << std::endl;
+  std::cout << "Antwoordbestand weggeschreven naar \"" << argv[2] << "\"" << std::endl;
   return 0;
 }
