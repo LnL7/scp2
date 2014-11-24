@@ -1,0 +1,3 @@
+5449000000996	24	1.00	Coca-Cola 33cl blik
+4333465106205	10	0.30	Zakdoekjes
+9780321563842	5	17.90	The C++ Programming Language, 4th Edition
